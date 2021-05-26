@@ -1,0 +1,165 @@
+#!/bin/bash
+
+echo 'Install zsh'
+echo '-----------'
+brew install zsh
+
+# Install zsh
+echo 'Install oh-my-zsh'
+echo '-----------------'
+rm -rf $HOME/.oh-my-zsh
+curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+mkdir ~/.oh-my-zsh
+
+# Add global gitignore
+ln -s $HOME/dotfiles/shell/.global-gitignore $HOME/.global-gitignore
+git config --global core.excludesfile $HOME/.global-gitignore
+
+# Symlink zsh prefs
+rm $HOME/.zshrc
+ln -s $HOME/dotfiles/shell/.zshrc $HOME/.zshrc
+
+# Activate z
+cd ~/dotfiles/shell
+chmod +x z.sh
+
+echo 'Install nvm'
+echo '-----------'
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+
+echo 'Install homebrew'
+echo '----------------'
+echo install homebrew
+sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+echo 'Install some nice quicklook plugins'
+echo '-----------------------------------'
+brew install --force qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip webp-quicklook suspicious-package
+
+echo 'Install php'
+echo '-----------'
+brew install php@5.6
+brew install php@7.1
+brew install php@7.3
+brew install php@7.4
+brew install php@8.0
+
+echo 'Install imagemagick'
+echo '-------------------'
+brew install imagemagick
+
+echo 'Install imagick'
+echo '---------------'
+pecl install imagick
+
+echo 'Install zsh-autosuggestions'
+echo '---------------------------'
+brew install zsh-autosuggestions
+
+echo 'Install mamp'
+echo '------------'
+brew install mamp
+
+echo 'Install composer'
+echo '----------------'
+brew install composer
+
+echo 'Install 1password'
+echo '-----------------'
+brew install 1password
+
+echo 'Install sublime-text'
+echo '--------------------'
+brew install sublime-text
+
+echo 'Install tableplus'
+echo '-----------------'
+brew install tableplus
+
+echo 'Install Notion'
+echo '------------------'
+brew install notion
+
+echo 'Install fork'
+echo '------------'
+brew install fork
+
+echo 'Install telegram'
+echo '----------------'
+brew install telegram
+
+echo 'Install spotify'
+echo '---------------'
+brew install spotify
+
+echo 'Install whatsapp'
+echo '----------------'
+brew install whatsapp
+
+echo 'Install atom'
+echo '------------'
+brew install atom
+
+echo 'Install postman'
+echo '---------------'
+brew install postman
+
+echo 'Install authy'
+echo '-------------'
+brew install authy
+
+echo 'Install discord'
+echo '---------------'
+brew install discord
+
+echo 'Install pop.so'
+echo '-----------------'
+brew install --cask pop
+
+echo 'Install firefox'
+echo '---------------'
+brew install --cask firefox
+
+echo 'Install iterm2'
+echo '--------------'
+brew install --cask iterm2
+
+echo 'Install google-chrome'
+echo '---------------------'
+brew install --cask google-chrome
+
+echo 'Install Figma'
+echo '---------------------'
+brew install --cask figma
+
+echo 'Install Figma'
+echo '---------------------'
+brew install --cask figma
+
+echo 'Install Adobe creative cloud'
+echo '---------------------'
+brew install --cask adobe-creative-cloud
+
+echo 'create ~/.nvm directory'
+echo '-----------------------'
+mkdir ~/.nvm
+
+echo 'create ~/.profile directory'
+echo '-----------------------'
+mkdir ~/.profile
+
+echo '++++++++++++++++++++++++++++++'
+echo '++++++++++++++++++++++++++++++'
+echo 'All done!'
+
+echo '++++++++++++++++++++++++++++++'
+echo 'Some optional tidbits'
+
+echo '++++++++++++++++++++++++++++++'
+echo 'Some missing apps'
+
+echo '- PhpStorm'
+
+echo '++++++++++++++++++++++++++++++'
+echo '++++++++++++++++++++++++++++++'
