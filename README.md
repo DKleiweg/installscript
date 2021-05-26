@@ -1,11 +1,17 @@
-My personal dotfiles.
+# My personal dotfiles
 
-You can install them by cloning the repository as dotfiles in your home directory and running the bootstrap script.
+My personal installscript.
 
-git clone https://github.com/DKleiweg/installscript.git
-cd dotfiles
+You can install them by cloning the repository as `installscript` in your home directory and running the bootstrap script.
+
+```
+git clone git@github.com:DKleiweg/installscript.git
+cd installscript
 ./bootstrap
+```
 
-The bootstrap script can be run by cd-ing into the .dotfiles directory and performing this command:
+The bootstrap script can be run by cd-ing into the `.installscript` directory and performing this command:
 
+```bash
 ./bootstrap
+```
